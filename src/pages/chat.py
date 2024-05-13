@@ -141,7 +141,6 @@ def chat_page():
         st.session_state.chat_history.append(AIMessage(content=response))
 
 if 'logged_in' in st.session_state.keys():
-    st.text('Succesfully Logged In agaiiiiiiiin!')
     chat_page()
 else:
     st.switch_page("app.py")
