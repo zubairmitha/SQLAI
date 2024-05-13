@@ -86,14 +86,14 @@ def get_response(user_query: str, db: SQLDatabase, chat_history: list):
   
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = [
-      AIMessage(content="Hello! I'm a SQL assistant. Ask me anything about your database."),
+      AIMessage(content="Hello! I'm a SQL assistant. you can ask me anything about your database."),
     ]
 
 load_dotenv()
 
 st.set_page_config(page_title="Chat with MySQL", page_icon=":speech_balloon:")
 
-st.title("Chat with MySQL")
+st.title("Chat with MySQL") #)
 
 with st.sidebar:
     st.subheader("Settings")
