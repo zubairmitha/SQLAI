@@ -7,3 +7,5 @@ mysql-connector-python==8.3.0
 groq==0.4.2
 langchain-groq==0.0.1
 python-dotenv==0.10.1
+python-decouple == 3.6
+streamlit_extras==0.0.1
