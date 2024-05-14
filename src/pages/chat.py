@@ -116,7 +116,7 @@ def chat_page():
                 )
                 st.session_state.db = db
                 st.success("Connected to database!")
-                
+
     database_name = st.session_state["Database"]
     st.title(f"Chat with {database_name}")
 
@@ -144,6 +144,6 @@ def chat_page():
 if 'logged_in' in st.session_state.keys():
     chat_page()
 else:
-    st.switch_page("app.py")
+    st.switch_page("Login.py")
 
 
