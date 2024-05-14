@@ -93,9 +93,8 @@ if "chat_history" not in st.session_state:
 
 
 def chat_page():
-     #st.set_page_config(page_title="Chat with MySQL", page_icon=":speech_balloon:")
-
-    st.title("Chat with MySQL") #)
+    database_name = st.session_state["Database"]
+    st.title(f"Chat with {database_name}")
 
     with st.sidebar:
         st.subheader("Settings")

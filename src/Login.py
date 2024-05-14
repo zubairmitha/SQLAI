@@ -10,7 +10,7 @@ import streamlit as st
 from decouple import config
 
 def login_page():
-    st.markdown('## Chat with SQL AI ⚔️')
+    st.markdown('## Chat with SQL AI')
     col1, col2 = st.columns((2,1))
     with col1:
         st.markdown(
@@ -21,13 +21,13 @@ def login_page():
             - Are orders up this week?
 
 
-            #### [Sign Up Now 🤘🏻]({config('STRIPE_CHECKOUT_LINK')})
+            **[Sign Up Now]({config('STRIPE_CHECKOUT_LINK')})**
             """
         )
 
 
 
-    st.markdown('### Already have an Account? Login Below👇🏻')
+    st.markdown('### Already have an Account? Login Below')
     with st.form("login_form"):
         st.write("Login")
         email = st.text_input('Enter Your Email')
@@ -43,6 +43,7 @@ def login_page():
         else:
             st.text('Incorrect, login credentials.')
             st.session_state['logged_in'] = False
+
 
 load_dotenv()
 st.set_page_config(page_icon='🗡', page_title='Chat with SQL AI')
