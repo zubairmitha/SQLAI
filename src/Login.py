@@ -10,15 +10,15 @@ import streamlit as st
 from decouple import config
 
 def login_page():
-    st.markdown('## Chat with SQL AI')
+    st.markdown('## SQL Chat')
     col1, col2 = st.columns((2,1))
     with col1:
         st.markdown(
             f"""
-            Chat with SQL AI to ask questions about your database. You can ask questions like:
+            Use SQL Chat to ask questions about your database. You can ask questions like:
             - How many products do we have?
             - What are the 10 most popluar products?
-            - Are orders up this week?
+            - How many Orders placed today?
 
 
             **[Sign Up Now]({config('STRIPE_CHECKOUT_LINK')})**
