@@ -93,8 +93,7 @@ if "chat_history" not in st.session_state:
 
 
 def chat_page():
-    database_name = st.session_state["Database"]
-    st.title(f"Chat with {database_name}")
+  
 
     with st.sidebar:
         st.subheader("Settings")
@@ -117,7 +116,10 @@ def chat_page():
                 )
                 st.session_state.db = db
                 st.success("Connected to database!")
-        
+                
+    database_name = st.session_state["Database"]
+    st.title(f"Chat with {database_name}")
+
     for message in st.session_state.chat_history:
         if isinstance(message, AIMessage):
             with st.chat_message("AI"):
